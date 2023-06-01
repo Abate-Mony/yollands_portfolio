@@ -5,9 +5,8 @@ const montserrat = Montserrat({
   variable: "--font-mont"
 
 })
-import { Navbar } from '@/components'
+import {Navbar} from '@/components'
 import Head from 'next/head'
-import Footer from '@/components/Footer'
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -22,7 +21,6 @@ export default function App({ Component, pageProps }) {
       min-h-screenw-full mx-auto`}>
         <Component {...pageProps} />
       </main>
-      <Footer />
     </>
   )
 }
