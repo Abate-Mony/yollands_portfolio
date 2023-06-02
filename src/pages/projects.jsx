@@ -5,23 +5,23 @@ import profilepic from '../../public/images/profile/developer-pic-1.png'
 import Link from 'next/link'
 
 const Projects = () => {
-    const FeatureProject = ({ type, title, summary, image, link, githublink }) => {
+    // const FeatureProject = ({ type, title, summary, image, link, githublink }) => {
 
-        return (
-            <article>
-                <Link href={link || ""} className="">
-                    <Image src={image || profilepic} alt="user git account "
-                        className="w-full objective-fit h-auto" />
-                </Link>
-                <div>
-                    <span className="">
+    //     return (
+    //         <article>
+    //             <Link href={link || ""} className="">
+    //                 <Image src={image || profilepic} alt="user git account "
+    //                     className="w-full objective-fit h-auto" />
+    //             </Link>
+    //             <div>
+    //                 <span className="">
 
 
-                    </span>
-                </div>
-            </article>
-        )
-    }
+    //                 </span>
+    //             </div>
+    //         </article>
+    //     )
+    // }
 
 
 
