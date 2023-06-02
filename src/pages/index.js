@@ -7,7 +7,22 @@ import Link from 'next/link'
 import Marquee from "react-fast-marquee";
 import HireMe from '@/components/HireMe'
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg"
+import { motion } from 'framer-motion'
 export default function Home() {
+  const _show = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1
+      }
+    }
+  }
   return (
     <>
       <Head>
@@ -79,7 +94,7 @@ export default function Home() {
                 >
                   Resume
                 </Link>
-                <Link href="mailto:bateemma14@gmail.com"
+                <Link href="contact"
                   className="
                 flex items-center bg-light text-dark min-w-[8rem] 
               justify-center
@@ -122,17 +137,230 @@ export default function Home() {
 
             </div>
           </div>
+          {/* testimonails */}
+
+          <section class="text-neutral-700= px-4  dark:text-neutral-300 text-dark container mx-auto mb-10" id="testimonials">
+            <div class="mx-auto text-center md:max-w-xl lg:max-w-3xl">
+              <h3 class="mb-6 text-3xl text-dark font-bold">Testimonials</h3>
+              <p class="mb-6 pb-2 md:mb-12 md:pb-0 text-dark">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
+                error amet numquam iure provident voluptate esse quasi, veritatis
+                totam voluptas nostrum quisquam eum porro a pariatur veniam.
+              </p>
+            </div>
+
+            <div class="grid gap-6 text-center md:grid-cols-3">
+              <motion.div
+                variants={_show}
+                initial="hidden"
+                whileInView="show"
+
+
+              >
+                <div
+                  class="block rounded-lg testimonial bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
+                  <div class="h-28 overflow-hidden rounded-t-lg bg-[#9d789b]"></div>
+                  <div
+                    class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
+                    <img
+                      src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" alt="testimonials" />
+                  </div>
+                  <div class="p-6">
+                    <h4 class="mb-4 text-2xl font-semibold">Maria Smantha</h4>
+                    <hr />
+                    <p class="mt-4">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="inline-block h-7 w-7 pr-2"
+                        viewBox="0 0 24 24">
+                        <path
+                          d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
+                      </svg>
+                      Lorem ipsum dolor sit amet eos adipisci, consectetur
+                      adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+              
+              
+              variants={_show}
+              initial="hidden"
+              whileInView="show"
+              >
+                <div
+                  class="block rounded-lg testimonial bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
+                  <div class="h-28 overflow-hidden rounded-t-lg bg-[#6d5b98]"></div>
+                  <div
+                    class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
+                    <img
+                      src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp" alt="testimonials" />
+                  </div>
+                  <div class="p-6">
+                    <h4 class="mb-4 text-2xl font-semibold">John Smith</h4>
+                    <hr />
+                    <p class="mt-4">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="inline-block h-7 w-7 pr-2"
+                        viewBox="0 0 24 24">
+                        <path
+                          d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
+                      </svg>
+                      Delectus impedit saepe officiis ab aliquam repellat rem unde
+                      ducimus.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+              
+              variants={_show}
+              initial="hidden"
+              whileInView="show"
+              >
+                <div
+                  class="block rounded-lg testimonial bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
+                  <div class="h-28 overflow-hidden rounded-t-lg bg-[#7a81a8]"></div>
+                  <div
+                    class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
+                    <img
+                      src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp" alt="testimonials" />
+                  </div>
+                  <div class="p-6">
+                    <h4 class="mb-4 text-2xl font-semibold">Lisa Cudrow</h4>
+                    <hr />
+                    <p class="mt-4">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="inline-block h-7 w-7 pr-2"
+                        viewBox="0 0 24 24">
+                        <path
+                          d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
+                      </svg>
+                      Neque cupiditate assumenda in maiores repudi mollitia
+                      architecto.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+              
+              variants={_show}
+              initial="hidden"
+              whileInView="show"
+              
+              >
+                <div
+                  class="block rounded-lg testimonial bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
+                  <div class="h-28 overflow-hidden rounded-t-lg bg-[#6d5b98]"></div>
+                  <div
+                    class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
+                    <img
+                      src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp" alt="testimonials" />
+                  </div>
+                  <div class="p-6">
+                    <h4 class="mb-4 text-2xl font-semibold">John Smith</h4>
+                    <hr />
+                    <p class="mt-4">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="inline-block h-7 w-7 pr-2"
+                        viewBox="0 0 24 24">
+                        <path
+                          d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
+                      </svg>
+                      Delectus impedit saepe officiis ab aliquam repellat rem unde
+                      ducimus.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+              
+              variants={_show}
+              initial="hidden"
+              whileInView="show"
+              
+              >
+                <div
+                  class="block rounded-lg testimonial bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
+                  <div class="h-28 overflow-hidden rounded-t-lg bg-[#9d789b]"></div>
+                  <div
+                    class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
+                    <img
+                      src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" alt="testimonials" />
+                  </div>
+                  <div class="p-6">
+                    <h4 class="mb-4 text-2xl font-semibold">Maria Smantha</h4>
+                    <hr />
+                    <p class="mt-4">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="inline-block h-7 w-7 pr-2"
+                        viewBox="0 0 24 24">
+                        <path
+                          d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
+                      </svg>
+                      Lorem ipsum dolor sit amet eos adipisci, consectetur
+                      adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+              
+              
+              variants={_show}
+              initial="hidden"
+              whileInView="show"
+              >
+                <div
+                  class="block rounded-lg testimonial bg-white shadow-lg dark:bg-neutral-700 dark:shadow-black/30">
+                  <div class="h-28 overflow-hidden rounded-t-lg bg-[#6d5b98]"></div>
+                  <div
+                    class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
+                    <img
+                      src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp" alt="testimonials" />
+                  </div>
+                  <div class="p-6">
+                    <h4 class="mb-4 text-2xl font-semibold">John Smith</h4>
+                    <hr />
+                    <p class="mt-4">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        class="inline-block h-7 w-7 pr-2"
+                        viewBox="0 0 24 24">
+                        <path
+                          d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
+                      </svg>
+                      Delectus impedit saepe officiis ab aliquam repellat rem unde
+                      ducimus.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </section>
           <Marquee
-          className='mb-4'
+            className='mb-4'
           >
             I can be a React component, multiple React components, or just some text.
           </Marquee>
         </Layout>
-        <HireMe/>
+        <HireMe />
         <div
-        className='absolute right-0 bottom-8 inline-block w-24 '
+          className='absolute right-0 bottom-8 inline-block w-24 '
         >
-        <Image src={lightBulb} alt='yoland' />
+          <Image src={lightBulb} alt='yoland' />
         </div>
       </main>
     </>

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding:6rem;
+
+}
 .center-items {
   @apply flex justify-center items-center;
 }

@@ -9,6 +9,7 @@ import {
     motion, useMotionValue, useSpring
     , useInView
 } from 'framer-motion'
+import Experience from '@/components/Experience'
 const AnimatedNumber = ({ value }) => {
     const ref = useRef(null);
     const motionValue = useMotionValue(0);
@@ -80,7 +81,7 @@ const About = () => {
 
                                 <span className="icons
                             
-                            sticky top-56
+                            sticky top-20
                             w-10 block flex-none h-10 bg-slate-500 rounded-full">
                                     icon
                                 </span>
@@ -107,7 +108,7 @@ const About = () => {
 
                                 <span className="icons
                             
-                            sticky top-56
+                            sticky top-20
                             w-10 block flex-none h-10 bg-slate-500 rounded-full">
                                     icon
                                 </span>
@@ -135,7 +136,7 @@ const About = () => {
 
                                 <span className="icons
                             
-                            sticky top-56
+                            sticky top-20
                             w-10 block flex-none h-10 bg-slate-500 rounded-full">
                                     icon
                                 </span>
@@ -279,7 +280,11 @@ const About = () => {
                     <h2 className='text-sm italic leading-none '>Years Of Experience</h2>
                 </div>
             </div>
-            <Skills/>
+            {/* <Skills/> */}
+            <Experience></Experience>
+            
+          
+  
         </>
     )
 }
