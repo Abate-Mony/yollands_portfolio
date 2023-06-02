@@ -110,7 +110,7 @@ const Projects = () => {
                                 </div>
                                 <div className="px-10 py-20 text-center transition duration-300 transform bg-light text-dark rounded shadow-2xl hover:scale-105 md:shadow-xl hover:shadow-2xl">
                                     <p className="font-semibold text-dark">
-                                        Some don't, become nothing again
+                                        Some dont, become nothing again
                                     </p>
                                 </div>
                                 <div className="px-10 py-20 text-center transition duration-300 transform bg-light text-dark rounded shadow-2xl hover:scale-105 md:shadow-xl hover:shadow-2xl">
