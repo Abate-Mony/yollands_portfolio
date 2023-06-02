@@ -123,7 +123,7 @@ const About = () => {
                                 >
 
 
-                                    I believe that design is about more than just making things look pretty  it's about solving problems and
+                                    I believe that design is about more than just making things look pretty  its about solving problems and
                                     creating intuitive, enjoyable experiences for users.
 
                                 </p>
